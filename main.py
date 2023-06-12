@@ -17,7 +17,13 @@ if __name__ == '__main__':
 
 
 rabbitMQ = RabbitMQHandler.RabbitMQHandler()
-rabbitMQ.send()
+for i in range(3):
+  rabbitMQ.send("enity"+str(i),"LcmEntity")
+
+for i in range(3):
+    rabbitMQ.send("fused entity"+str(i),"LcmFusedEntity")
+
+#rabbitMQ.__del__()
 
 
 
